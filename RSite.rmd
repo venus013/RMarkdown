@@ -1,0 +1,12 @@
+---
+date: "`r format(Sys.Date(), '%Y-%m-%d')`"
+output: html_document
+---
+
+```{r}
+library(plotly)
+
+x <- seq(1, 10, by = 0.1)
+y <- sin(x)
+
+plot_ly(x = ~x, y = ~y, type = 'scatter', mode = 'lines', name = 'sin(x)')
